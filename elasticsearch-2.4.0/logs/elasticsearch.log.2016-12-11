@@ -1,0 +1,263 @@
+[2016-12-12 08:01:30,136][INFO ][node                     ] [Araki] stopping ...
+[2016-12-12 08:01:30,337][INFO ][node                     ] [Araki] stopped
+[2016-12-12 08:01:30,337][INFO ][node                     ] [Araki] closing ...
+[2016-12-12 08:01:30,343][INFO ][node                     ] [Araki] closed
+[2016-12-12 08:06:15,629][INFO ][node                     ] [Visimajoris] version[2.4.0], pid[16227], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2016-12-12 08:06:15,630][INFO ][node                     ] [Visimajoris] initializing ...
+[2016-12-12 08:06:16,776][INFO ][plugins                  ] [Visimajoris] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-12-12 08:06:16,963][INFO ][env                      ] [Visimajoris] using [1] data paths, mounts [[/home (/dev/mapper/fedora-home)]], net usable_space [318.9gb], net total_space [400.9gb], spins? [possibly], types [ext4]
+[2016-12-12 08:06:16,963][INFO ][env                      ] [Visimajoris] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-12-12 08:06:16,964][WARN ][env                      ] [Visimajoris] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-12-12 08:06:21,083][INFO ][node                     ] [Visimajoris] initialized
+[2016-12-12 08:06:21,083][INFO ][node                     ] [Visimajoris] starting ...
+[2016-12-12 08:06:21,396][INFO ][transport                ] [Visimajoris] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-12-12 08:06:21,492][INFO ][discovery                ] [Visimajoris] elasticsearch/4eYkGQZMRGW0VVKn5uAiUg
+[2016-12-12 08:06:24,548][INFO ][cluster.service          ] [Visimajoris] new_master {Visimajoris}{4eYkGQZMRGW0VVKn5uAiUg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-12-12 08:06:24,578][INFO ][http                     ] [Visimajoris] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2016-12-12 08:06:24,578][INFO ][node                     ] [Visimajoris] started
+[2016-12-12 08:06:25,103][INFO ][gateway                  ] [Visimajoris] recovered [3] indices into cluster_state
+[2016-12-12 08:06:27,452][WARN ][indices.cluster          ] [Visimajoris] [[optobiz][0]] marking and sending shard failed due to [failed recovery]
+[optobiz][[optobiz][0]] IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/0/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/0/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:224)
+	at org.elasticsearch.index.shard.StoreRecoveryService.access$100(StoreRecoveryService.java:56)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:129)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [optobiz][[optobiz][0]] IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/0/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/0/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:208)
+	... 5 more
+Caused by: org.apache.lucene.index.IndexNotFoundException: no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/0/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/0/index))): files: [write.lock]
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:726)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:683)
+	at org.apache.lucene.index.SegmentInfos.readLatestCommit(SegmentInfos.java:490)
+	at org.elasticsearch.common.lucene.Lucene.readSegmentInfos(Lucene.java:95)
+	at org.elasticsearch.index.store.Store.readSegmentsInfo(Store.java:163)
+	at org.elasticsearch.index.store.Store.readLastCommittedSegmentsInfo(Store.java:148)
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:199)
+	... 5 more
+[2016-12-12 08:06:27,487][WARN ][cluster.action.shard     ] [Visimajoris] [optobiz][0] received shard failed for target shard [[optobiz][0], node[4eYkGQZMRGW0VVKn5uAiUg], [P], v[9], s[INITIALIZING], a[id=jbNUjJMwRjmUqjgXBYishQ], unassigned_info[[reason=CLUSTER_RECOVERED], at[2016-12-12T14:06:24.613Z]]], indexUUID [kHk822-dQDeiJOHqpgs7aA], message [failed recovery], failure [IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/0/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/0/index))): files: [write.lock]]; ]
+[optobiz][[optobiz][0]] IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/0/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/0/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:224)
+	at org.elasticsearch.index.shard.StoreRecoveryService.access$100(StoreRecoveryService.java:56)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:129)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [optobiz][[optobiz][0]] IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/0/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/0/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:208)
+	... 5 more
+Caused by: org.apache.lucene.index.IndexNotFoundException: no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/0/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/0/index))): files: [write.lock]
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:726)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:683)
+	at org.apache.lucene.index.SegmentInfos.readLatestCommit(SegmentInfos.java:490)
+	at org.elasticsearch.common.lucene.Lucene.readSegmentInfos(Lucene.java:95)
+	at org.elasticsearch.index.store.Store.readSegmentsInfo(Store.java:163)
+	at org.elasticsearch.index.store.Store.readLastCommittedSegmentsInfo(Store.java:148)
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:199)
+	... 5 more
+[2016-12-12 08:06:27,489][WARN ][indices.cluster          ] [Visimajoris] [[optobiz][4]] marking and sending shard failed due to [failed recovery]
+[optobiz][[optobiz][4]] IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/4/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/4/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:224)
+	at org.elasticsearch.index.shard.StoreRecoveryService.access$100(StoreRecoveryService.java:56)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:129)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [optobiz][[optobiz][4]] IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/4/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/4/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:208)
+	... 5 more
+Caused by: org.apache.lucene.index.IndexNotFoundException: no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/4/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/4/index))): files: [write.lock]
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:726)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:683)
+	at org.apache.lucene.index.SegmentInfos.readLatestCommit(SegmentInfos.java:490)
+	at org.elasticsearch.common.lucene.Lucene.readSegmentInfos(Lucene.java:95)
+	at org.elasticsearch.index.store.Store.readSegmentsInfo(Store.java:163)
+	at org.elasticsearch.index.store.Store.readLastCommittedSegmentsInfo(Store.java:148)
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:199)
+	... 5 more
+[2016-12-12 08:06:27,492][WARN ][cluster.action.shard     ] [Visimajoris] [optobiz][4] received shard failed for target shard [[optobiz][4], node[4eYkGQZMRGW0VVKn5uAiUg], [P], v[9], s[INITIALIZING], a[id=fbVJbCfgQJey4RLrxE1XLQ], unassigned_info[[reason=CLUSTER_RECOVERED], at[2016-12-12T14:06:24.613Z]]], indexUUID [kHk822-dQDeiJOHqpgs7aA], message [failed recovery], failure [IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/4/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/4/index))): files: [write.lock]]; ]
+[optobiz][[optobiz][4]] IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/4/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/4/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:224)
+	at org.elasticsearch.index.shard.StoreRecoveryService.access$100(StoreRecoveryService.java:56)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:129)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [optobiz][[optobiz][4]] IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/4/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/4/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:208)
+	... 5 more
+Caused by: org.apache.lucene.index.IndexNotFoundException: no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/4/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/4/index))): files: [write.lock]
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:726)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:683)
+	at org.apache.lucene.index.SegmentInfos.readLatestCommit(SegmentInfos.java:490)
+	at org.elasticsearch.common.lucene.Lucene.readSegmentInfos(Lucene.java:95)
+	at org.elasticsearch.index.store.Store.readSegmentsInfo(Store.java:163)
+	at org.elasticsearch.index.store.Store.readLastCommittedSegmentsInfo(Store.java:148)
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:199)
+	... 5 more
+[2016-12-12 08:06:27,494][WARN ][indices.cluster          ] [Visimajoris] [[optobiz][2]] marking and sending shard failed due to [failed recovery]
+[optobiz][[optobiz][2]] IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/2/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/2/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:224)
+	at org.elasticsearch.index.shard.StoreRecoveryService.access$100(StoreRecoveryService.java:56)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:129)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [optobiz][[optobiz][2]] IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/2/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/2/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:208)
+	... 5 more
+Caused by: org.apache.lucene.index.IndexNotFoundException: no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/2/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/2/index))): files: [write.lock]
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:726)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:683)
+	at org.apache.lucene.index.SegmentInfos.readLatestCommit(SegmentInfos.java:490)
+	at org.elasticsearch.common.lucene.Lucene.readSegmentInfos(Lucene.java:95)
+	at org.elasticsearch.index.store.Store.readSegmentsInfo(Store.java:163)
+	at org.elasticsearch.index.store.Store.readLastCommittedSegmentsInfo(Store.java:148)
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:199)
+	... 5 more
+[2016-12-12 08:06:27,495][WARN ][cluster.action.shard     ] [Visimajoris] [optobiz][2] received shard failed for target shard [[optobiz][2], node[4eYkGQZMRGW0VVKn5uAiUg], [P], v[9], s[INITIALIZING], a[id=Lpl5G9vhRKyn1n7DnUVueA], unassigned_info[[reason=CLUSTER_RECOVERED], at[2016-12-12T14:06:24.613Z]]], indexUUID [kHk822-dQDeiJOHqpgs7aA], message [failed recovery], failure [IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/2/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/2/index))): files: [write.lock]]; ]
+[optobiz][[optobiz][2]] IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/2/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/2/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:224)
+	at org.elasticsearch.index.shard.StoreRecoveryService.access$100(StoreRecoveryService.java:56)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:129)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [optobiz][[optobiz][2]] IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/2/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/2/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:208)
+	... 5 more
+Caused by: org.apache.lucene.index.IndexNotFoundException: no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/2/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/2/index))): files: [write.lock]
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:726)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:683)
+	at org.apache.lucene.index.SegmentInfos.readLatestCommit(SegmentInfos.java:490)
+	at org.elasticsearch.common.lucene.Lucene.readSegmentInfos(Lucene.java:95)
+	at org.elasticsearch.index.store.Store.readSegmentsInfo(Store.java:163)
+	at org.elasticsearch.index.store.Store.readLastCommittedSegmentsInfo(Store.java:148)
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:199)
+	... 5 more
+[2016-12-12 08:06:27,597][WARN ][cluster.action.shard     ] [Visimajoris] [optobiz][2] received shard failed for target shard [[optobiz][2], node[4eYkGQZMRGW0VVKn5uAiUg], [P], v[9], s[INITIALIZING], a[id=Lpl5G9vhRKyn1n7DnUVueA], unassigned_info[[reason=CLUSTER_RECOVERED], at[2016-12-12T14:06:24.613Z]]], indexUUID [kHk822-dQDeiJOHqpgs7aA], message [master {Visimajoris}{4eYkGQZMRGW0VVKn5uAiUg}{127.0.0.1}{127.0.0.1:9300} marked shard as initializing, but shard is marked as failed, resend shard failure]
+[2016-12-12 08:06:27,598][WARN ][cluster.action.shard     ] [Visimajoris] [optobiz][4] received shard failed for target shard [[optobiz][4], node[4eYkGQZMRGW0VVKn5uAiUg], [P], v[9], s[INITIALIZING], a[id=fbVJbCfgQJey4RLrxE1XLQ], unassigned_info[[reason=CLUSTER_RECOVERED], at[2016-12-12T14:06:24.613Z]]], indexUUID [kHk822-dQDeiJOHqpgs7aA], message [master {Visimajoris}{4eYkGQZMRGW0VVKn5uAiUg}{127.0.0.1}{127.0.0.1:9300} marked shard as initializing, but shard is marked as failed, resend shard failure]
+[2016-12-12 08:06:27,605][WARN ][cluster.action.shard     ] [Visimajoris] [optobiz][0] received shard failed for target shard [[optobiz][0], node[4eYkGQZMRGW0VVKn5uAiUg], [P], v[9], s[INITIALIZING], a[id=jbNUjJMwRjmUqjgXBYishQ], unassigned_info[[reason=CLUSTER_RECOVERED], at[2016-12-12T14:06:24.613Z]]], indexUUID [kHk822-dQDeiJOHqpgs7aA], message [master {Visimajoris}{4eYkGQZMRGW0VVKn5uAiUg}{127.0.0.1}{127.0.0.1:9300} marked shard as initializing, but shard is marked as failed, resend shard failure]
+[2016-12-12 08:06:27,606][WARN ][indices.cluster          ] [Visimajoris] [[optobiz][3]] marking and sending shard failed due to [failed recovery]
+[optobiz][[optobiz][3]] IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/3/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/3/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:224)
+	at org.elasticsearch.index.shard.StoreRecoveryService.access$100(StoreRecoveryService.java:56)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:129)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [optobiz][[optobiz][3]] IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/3/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/3/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:208)
+	... 5 more
+Caused by: org.apache.lucene.index.IndexNotFoundException: no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/3/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/3/index))): files: [write.lock]
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:726)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:683)
+	at org.apache.lucene.index.SegmentInfos.readLatestCommit(SegmentInfos.java:490)
+	at org.elasticsearch.common.lucene.Lucene.readSegmentInfos(Lucene.java:95)
+	at org.elasticsearch.index.store.Store.readSegmentsInfo(Store.java:163)
+	at org.elasticsearch.index.store.Store.readLastCommittedSegmentsInfo(Store.java:148)
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:199)
+	... 5 more
+[2016-12-12 08:06:27,608][WARN ][cluster.action.shard     ] [Visimajoris] [optobiz][3] received shard failed for target shard [[optobiz][3], node[4eYkGQZMRGW0VVKn5uAiUg], [P], v[9], s[INITIALIZING], a[id=QzGL-6TCQlmtd9lLNH3ntA], unassigned_info[[reason=CLUSTER_RECOVERED], at[2016-12-12T14:06:24.613Z]]], indexUUID [kHk822-dQDeiJOHqpgs7aA], message [failed recovery], failure [IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/3/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/3/index))): files: [write.lock]]; ]
+[optobiz][[optobiz][3]] IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/3/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/3/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:224)
+	at org.elasticsearch.index.shard.StoreRecoveryService.access$100(StoreRecoveryService.java:56)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:129)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [optobiz][[optobiz][3]] IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/3/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/3/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:208)
+	... 5 more
+Caused by: org.apache.lucene.index.IndexNotFoundException: no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/3/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/3/index))): files: [write.lock]
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:726)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:683)
+	at org.apache.lucene.index.SegmentInfos.readLatestCommit(SegmentInfos.java:490)
+	at org.elasticsearch.common.lucene.Lucene.readSegmentInfos(Lucene.java:95)
+	at org.elasticsearch.index.store.Store.readSegmentsInfo(Store.java:163)
+	at org.elasticsearch.index.store.Store.readLastCommittedSegmentsInfo(Store.java:148)
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:199)
+	... 5 more
+[2016-12-12 08:06:27,645][WARN ][cluster.action.shard     ] [Visimajoris] [optobiz][3] received shard failed for target shard [[optobiz][3], node[4eYkGQZMRGW0VVKn5uAiUg], [P], v[9], s[INITIALIZING], a[id=QzGL-6TCQlmtd9lLNH3ntA], unassigned_info[[reason=CLUSTER_RECOVERED], at[2016-12-12T14:06:24.613Z]]], indexUUID [kHk822-dQDeiJOHqpgs7aA], message [master {Visimajoris}{4eYkGQZMRGW0VVKn5uAiUg}{127.0.0.1}{127.0.0.1:9300} marked shard as initializing, but shard is marked as failed, resend shard failure]
+[2016-12-12 08:06:27,646][WARN ][indices.cluster          ] [Visimajoris] [[optobiz][1]] marking and sending shard failed due to [failed recovery]
+[optobiz][[optobiz][1]] IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/1/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/1/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:224)
+	at org.elasticsearch.index.shard.StoreRecoveryService.access$100(StoreRecoveryService.java:56)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:129)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [optobiz][[optobiz][1]] IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/1/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/1/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:208)
+	... 5 more
+Caused by: org.apache.lucene.index.IndexNotFoundException: no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/1/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/1/index))): files: [write.lock]
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:726)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:683)
+	at org.apache.lucene.index.SegmentInfos.readLatestCommit(SegmentInfos.java:490)
+	at org.elasticsearch.common.lucene.Lucene.readSegmentInfos(Lucene.java:95)
+	at org.elasticsearch.index.store.Store.readSegmentsInfo(Store.java:163)
+	at org.elasticsearch.index.store.Store.readLastCommittedSegmentsInfo(Store.java:148)
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:199)
+	... 5 more
+[2016-12-12 08:06:27,647][WARN ][cluster.action.shard     ] [Visimajoris] [optobiz][1] received shard failed for target shard [[optobiz][1], node[4eYkGQZMRGW0VVKn5uAiUg], [P], v[9], s[INITIALIZING], a[id=Y3PWMC0_SU-RFvgkFH9EjQ], unassigned_info[[reason=CLUSTER_RECOVERED], at[2016-12-12T14:06:24.613Z]]], indexUUID [kHk822-dQDeiJOHqpgs7aA], message [failed recovery], failure [IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/1/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/1/index))): files: [write.lock]]; ]
+[optobiz][[optobiz][1]] IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/1/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/1/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:224)
+	at org.elasticsearch.index.shard.StoreRecoveryService.access$100(StoreRecoveryService.java:56)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:129)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [optobiz][[optobiz][1]] IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/1/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/1/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:208)
+	... 5 more
+Caused by: org.apache.lucene.index.IndexNotFoundException: no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/1/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/optobiz/1/index))): files: [write.lock]
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:726)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:683)
+	at org.apache.lucene.index.SegmentInfos.readLatestCommit(SegmentInfos.java:490)
+	at org.elasticsearch.common.lucene.Lucene.readSegmentInfos(Lucene.java:95)
+	at org.elasticsearch.index.store.Store.readSegmentsInfo(Store.java:163)
+	at org.elasticsearch.index.store.Store.readLastCommittedSegmentsInfo(Store.java:148)
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:199)
+	... 5 more
+[2016-12-12 08:06:27,648][WARN ][indices.cluster          ] [Visimajoris] [[twitter][0]] marking and sending shard failed due to [failed recovery]
+[twitter][[twitter][0]] IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/twitter/0/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/twitter/0/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:224)
+	at org.elasticsearch.index.shard.StoreRecoveryService.access$100(StoreRecoveryService.java:56)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:129)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [twitter][[twitter][0]] IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/twitter/0/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/twitter/0/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:208)
+	... 5 more
+Caused by: org.apache.lucene.index.IndexNotFoundException: no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/twitter/0/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/twitter/0/index))): files: [write.lock]
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:726)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:683)
+	at org.apache.lucene.index.SegmentInfos.readLatestCommit(SegmentInfos.java:490)
+	at org.elasticsearch.common.lucene.Lucene.readSegmentInfos(Lucene.java:95)
+	at org.elasticsearch.index.store.Store.readSegmentsInfo(Store.java:163)
+	at org.elasticsearch.index.store.Store.readLastCommittedSegmentsInfo(Store.java:148)
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:199)
+	... 5 more
+[2016-12-12 08:06:27,664][WARN ][cluster.action.shard     ] [Visimajoris] [twitter][0] received shard failed for target shard [[twitter][0], node[4eYkGQZMRGW0VVKn5uAiUg], [P], v[13], s[INITIALIZING], a[id=nNN5xZYcTper9Xd-bW9zOA], unassigned_info[[reason=CLUSTER_RECOVERED], at[2016-12-12T14:06:24.613Z]]], indexUUID [J6A_KFlUR8eqSWFi94deGQ], message [failed recovery], failure [IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/twitter/0/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/twitter/0/index))): files: [write.lock]]; ]
+[twitter][[twitter][0]] IndexShardRecoveryException[failed to fetch index version after copying it over]; nested: IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/twitter/0/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/twitter/0/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:224)
+	at org.elasticsearch.index.shard.StoreRecoveryService.access$100(StoreRecoveryService.java:56)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:129)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [twitter][[twitter][0]] IndexShardRecoveryException[shard allocated for local recovery (post api), should exist, but doesn't, current files: [write.lock]]; nested: IndexNotFoundException[no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/twitter/0/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/twitter/0/index))): files: [write.lock]];
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:208)
+	... 5 more
+Caused by: org.apache.lucene.index.IndexNotFoundException: no segments* file found in store(default(mmapfs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/twitter/0/index),niofs(/home/Benson/Dropbox/Startup_Coding/SixNexus/ElasticSearch/elasticsearch-2.4.0/data/elasticsearch/nodes/0/indices/twitter/0/index))): files: [write.lock]
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:726)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:683)
+	at org.apache.lucene.index.SegmentInfos.readLatestCommit(SegmentInfos.java:490)
+	at org.elasticsearch.common.lucene.Lucene.readSegmentInfos(Lucene.java:95)
+	at org.elasticsearch.index.store.Store.readSegmentsInfo(Store.java:163)
+	at org.elasticsearch.index.store.Store.readLastCommittedSegmentsInfo(Store.java:148)
+	at org.elasticsearch.index.shard.StoreRecoveryService.recoverFromStore(StoreRecoveryService.java:199)
+	... 5 more
+[2016-12-12 08:06:27,670][WARN ][cluster.action.shard     ] [Visimajoris] [twitter][0] received shard failed for target shard [[twitter][0], node[4eYkGQZMRGW0VVKn5uAiUg], [P], v[13], s[INITIALIZING], a[id=nNN5xZYcTper9Xd-bW9zOA], unassigned_info[[reason=CLUSTER_RECOVERED], at[2016-12-12T14:06:24.613Z]]], indexUUID [J6A_KFlUR8eqSWFi94deGQ], message [master {Visimajoris}{4eYkGQZMRGW0VVKn5uAiUg}{127.0.0.1}{127.0.0.1:9300} marked shard as initializing, but shard is marked as failed, resend shard failure]

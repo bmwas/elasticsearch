@@ -1,0 +1,339 @@
+[2016-12-11 22:18:47,385][INFO ][node                     ] [Meggan Braddock] version[2.4.0], pid[17136], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2016-12-11 22:18:47,387][INFO ][node                     ] [Meggan Braddock] initializing ...
+[2016-12-11 22:18:48,564][INFO ][plugins                  ] [Meggan Braddock] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-12-11 22:18:49,142][INFO ][env                      ] [Meggan Braddock] using [1] data paths, mounts [[/home (/dev/mapper/fedora-home)]], net usable_space [2.4tb], net total_space [2.6tb], spins? [possibly], types [ext4]
+[2016-12-11 22:18:49,142][INFO ][env                      ] [Meggan Braddock] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-12-11 22:18:49,142][WARN ][env                      ] [Meggan Braddock] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-12-11 22:18:54,898][INFO ][node                     ] [Meggan Braddock] initialized
+[2016-12-11 22:18:54,898][INFO ][node                     ] [Meggan Braddock] starting ...
+[2016-12-11 22:18:55,500][INFO ][transport                ] [Meggan Braddock] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-12-11 22:18:55,518][INFO ][discovery                ] [Meggan Braddock] elasticsearch/HXHjX2x9QsSIpt3-Pd8Q8A
+[2016-12-11 22:18:58,560][INFO ][cluster.service          ] [Meggan Braddock] new_master {Meggan Braddock}{HXHjX2x9QsSIpt3-Pd8Q8A}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-12-11 22:18:58,572][INFO ][http                     ] [Meggan Braddock] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2016-12-11 22:18:58,572][INFO ][node                     ] [Meggan Braddock] started
+[2016-12-11 22:18:59,801][INFO ][gateway                  ] [Meggan Braddock] recovered [3] indices into cluster_state
+[2016-12-11 22:22:32,158][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][0], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=LXVodphySB64MDjyUmCJEw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@19460ba3] lastShard [true]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...];
+Caused by: ElasticsearchException[Scroll must be provided when scanning...]
+	at org.elasticsearch.search.SearchService.executeScan(SearchService.java:292)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:425)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:421)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:22:32,160][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][4], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=YytGg_ZBRZ6Jos-1MRX_eg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@19460ba3]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...];
+Caused by: ElasticsearchException[Scroll must be provided when scanning...]
+	at org.elasticsearch.search.SearchService.executeScan(SearchService.java:292)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:425)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:421)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:22:32,206][DEBUG][action.search            ] [Meggan Braddock] All shards failed for phase: [init_scan]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...];
+Caused by: ElasticsearchException[Scroll must be provided when scanning...]
+	at org.elasticsearch.search.SearchService.executeScan(SearchService.java:292)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:425)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:421)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:22:32,160][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][2], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=36l34Q_qRtK21zm24g4PIg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@19460ba3] lastShard [true]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...];
+Caused by: ElasticsearchException[Scroll must be provided when scanning...]
+	at org.elasticsearch.search.SearchService.executeScan(SearchService.java:292)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:425)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:421)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:22:32,160][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][1], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=s8tTg7VISd-hyt_Odzo7gA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@19460ba3] lastShard [true]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...];
+Caused by: ElasticsearchException[Scroll must be provided when scanning...]
+	at org.elasticsearch.search.SearchService.executeScan(SearchService.java:292)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:425)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:421)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:22:32,158][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][3], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=QpF6QkibStezr0yfZUG2lg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@19460ba3] lastShard [true]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...];
+Caused by: ElasticsearchException[Scroll must be provided when scanning...]
+	at org.elasticsearch.search.SearchService.executeScan(SearchService.java:292)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:425)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:421)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:22:32,207][WARN ][rest.suppressed          ] path: /brainsearch/brains/_search, params: {index=brainsearch, type=brains, search_type=scan}
+Failed to execute phase [init_scan], all shards failed; shardFailures {[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][0]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...]; }{[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][1]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...]; }{[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][2]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...]; }{[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][3]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...]; }{[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][4]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...]; }
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction.onFirstPhaseResult(AbstractSearchAsyncAction.java:206)
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction$1.onFailure(AbstractSearchAsyncAction.java:152)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:872)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:850)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:387)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:39)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: ElasticsearchException[Scroll must be provided when scanning...]
+	at org.elasticsearch.search.SearchService.executeScan(SearchService.java:292)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:425)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:421)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	... 3 more
+[2016-12-11 22:22:48,108][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][0], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=LXVodphySB64MDjyUmCJEw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@651466f2] lastShard [true]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...];
+Caused by: ElasticsearchException[Scroll must be provided when scanning...]
+	at org.elasticsearch.search.SearchService.executeScan(SearchService.java:292)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:425)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:421)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:22:48,108][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][4], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=YytGg_ZBRZ6Jos-1MRX_eg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@651466f2] lastShard [true]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...];
+Caused by: ElasticsearchException[Scroll must be provided when scanning...]
+	at org.elasticsearch.search.SearchService.executeScan(SearchService.java:292)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:425)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:421)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:22:48,109][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][1], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=s8tTg7VISd-hyt_Odzo7gA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@651466f2] lastShard [true]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...];
+Caused by: ElasticsearchException[Scroll must be provided when scanning...]
+	at org.elasticsearch.search.SearchService.executeScan(SearchService.java:292)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:425)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:421)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:22:48,109][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][2], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=36l34Q_qRtK21zm24g4PIg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@651466f2] lastShard [true]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...];
+Caused by: ElasticsearchException[Scroll must be provided when scanning...]
+	at org.elasticsearch.search.SearchService.executeScan(SearchService.java:292)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:425)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:421)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:22:48,109][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][3], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=QpF6QkibStezr0yfZUG2lg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@651466f2]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...];
+Caused by: ElasticsearchException[Scroll must be provided when scanning...]
+	at org.elasticsearch.search.SearchService.executeScan(SearchService.java:292)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:425)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:421)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:22:48,125][DEBUG][action.search            ] [Meggan Braddock] All shards failed for phase: [init_scan]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...];
+Caused by: ElasticsearchException[Scroll must be provided when scanning...]
+	at org.elasticsearch.search.SearchService.executeScan(SearchService.java:292)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:425)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:421)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:22:48,126][WARN ][rest.suppressed          ] path: /brainsearch/brains/_search, params: {index=brainsearch, type=brains, search_type=scan}
+Failed to execute phase [init_scan], all shards failed; shardFailures {[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][0]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...]; }{[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][1]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...]; }{[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][2]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...]; }{[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][3]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...]; }{[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][4]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/scan]]]; nested: ElasticsearchException[Scroll must be provided when scanning...]; }
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction.onFirstPhaseResult(AbstractSearchAsyncAction.java:206)
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction$1.onFailure(AbstractSearchAsyncAction.java:152)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:872)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:850)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:387)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:39)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: ElasticsearchException[Scroll must be provided when scanning...]
+	at org.elasticsearch.search.SearchService.executeScan(SearchService.java:292)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:425)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchScanTransportHandler.messageReceived(SearchServiceTransportAction.java:421)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	... 3 more
+[2016-12-11 22:24:04,665][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][3], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=QpF6QkibStezr0yfZUG2lg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@5c07d18e] lastShard [true]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.];
+Caused by: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.]
+	at org.elasticsearch.search.internal.DefaultSearchContext.preProcess(DefaultSearchContext.java:212)
+	at org.elasticsearch.search.query.QueryPhase.preProcess(QueryPhase.java:103)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:689)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:24:04,665][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][4], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=YytGg_ZBRZ6Jos-1MRX_eg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@5c07d18e]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.];
+Caused by: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.]
+	at org.elasticsearch.search.internal.DefaultSearchContext.preProcess(DefaultSearchContext.java:212)
+	at org.elasticsearch.search.query.QueryPhase.preProcess(QueryPhase.java:103)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:689)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:24:04,665][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][2], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=36l34Q_qRtK21zm24g4PIg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@5c07d18e] lastShard [true]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.];
+Caused by: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.]
+	at org.elasticsearch.search.internal.DefaultSearchContext.preProcess(DefaultSearchContext.java:212)
+	at org.elasticsearch.search.query.QueryPhase.preProcess(QueryPhase.java:103)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:689)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:24:04,665][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][1], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=s8tTg7VISd-hyt_Odzo7gA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@5c07d18e] lastShard [true]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.];
+Caused by: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.]
+	at org.elasticsearch.search.internal.DefaultSearchContext.preProcess(DefaultSearchContext.java:212)
+	at org.elasticsearch.search.query.QueryPhase.preProcess(QueryPhase.java:103)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:689)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:24:04,665][DEBUG][action.search            ] [Meggan Braddock] [brainsearch][0], node[HXHjX2x9QsSIpt3-Pd8Q8A], [P], v[4], s[STARTED], a[id=LXVodphySB64MDjyUmCJEw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@5c07d18e] lastShard [true]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.];
+Caused by: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.]
+	at org.elasticsearch.search.internal.DefaultSearchContext.preProcess(DefaultSearchContext.java:212)
+	at org.elasticsearch.search.query.QueryPhase.preProcess(QueryPhase.java:103)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:689)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:24:04,669][DEBUG][action.search            ] [Meggan Braddock] All shards failed for phase: [query]
+RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.];
+Caused by: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.]
+	at org.elasticsearch.search.internal.DefaultSearchContext.preProcess(DefaultSearchContext.java:212)
+	at org.elasticsearch.search.query.QueryPhase.preProcess(QueryPhase.java:103)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:689)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-12-11 22:24:04,673][WARN ][rest.suppressed          ] path: /brainsearch/brains/_search, params: {index=brainsearch, type=brains}
+Failed to execute phase [query], all shards failed; shardFailures {[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][0]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.]; }{[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][1]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.]; }{[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][2]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.]; }{[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][3]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.]; }{[HXHjX2x9QsSIpt3-Pd8Q8A][brainsearch][4]: RemoteTransportException[[Meggan Braddock][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.]; }
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction.onFirstPhaseResult(AbstractSearchAsyncAction.java:206)
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction$1.onFailure(AbstractSearchAsyncAction.java:152)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:872)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:850)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:387)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:39)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: QueryPhaseExecutionException[Result window is too large, from + size must be less than or equal to: [10000] but was [100000]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter.]
+	at org.elasticsearch.search.internal.DefaultSearchContext.preProcess(DefaultSearchContext.java:212)
+	at org.elasticsearch.search.query.QueryPhase.preProcess(QueryPhase.java:103)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:689)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	... 3 more

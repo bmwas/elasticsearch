@@ -1,0 +1,15 @@
+[2016-11-28 10:12:05,443][INFO ][node                     ] [Master of Vengeance] version[2.4.0], pid[3386], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2016-11-28 10:12:05,462][INFO ][node                     ] [Master of Vengeance] initializing ...
+[2016-11-28 10:12:07,398][INFO ][plugins                  ] [Master of Vengeance] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-11-28 10:12:07,925][INFO ][env                      ] [Master of Vengeance] using [1] data paths, mounts [[/home (/dev/mapper/fedora-home)]], net usable_space [326.9gb], net total_space [400.9gb], spins? [possibly], types [ext4]
+[2016-11-28 10:12:07,925][INFO ][env                      ] [Master of Vengeance] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-11-28 10:12:07,925][WARN ][env                      ] [Master of Vengeance] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-11-28 10:12:12,084][INFO ][node                     ] [Master of Vengeance] initialized
+[2016-11-28 10:12:12,084][INFO ][node                     ] [Master of Vengeance] starting ...
+[2016-11-28 10:12:12,491][INFO ][transport                ] [Master of Vengeance] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-11-28 10:12:12,512][INFO ][discovery                ] [Master of Vengeance] elasticsearch/Lhht2dRhSkOBMl8wEn7Vqg
+[2016-11-28 10:12:15,620][INFO ][cluster.service          ] [Master of Vengeance] new_master {Master of Vengeance}{Lhht2dRhSkOBMl8wEn7Vqg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-11-28 10:12:15,656][INFO ][http                     ] [Master of Vengeance] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2016-11-28 10:12:15,656][INFO ][node                     ] [Master of Vengeance] started
+[2016-11-28 10:12:16,129][INFO ][gateway                  ] [Master of Vengeance] recovered [2] indices into cluster_state
+[2016-11-28 10:12:18,335][INFO ][cluster.routing.allocation] [Master of Vengeance] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[twitter][2], [twitter][3]] ...]).

@@ -1,0 +1,24 @@
+[2016-11-24 14:17:48,146][INFO ][node                     ] [N'Garai] version[2.4.0], pid[23323], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2016-11-24 14:17:48,149][INFO ][node                     ] [N'Garai] initializing ...
+[2016-11-24 14:17:49,852][INFO ][plugins                  ] [N'Garai] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-11-24 14:17:50,083][INFO ][env                      ] [N'Garai] using [1] data paths, mounts [[/home (/dev/mapper/fedora-home)]], net usable_space [2.4tb], net total_space [2.6tb], spins? [possibly], types [ext4]
+[2016-11-24 14:17:50,083][INFO ][env                      ] [N'Garai] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-11-24 14:17:50,083][WARN ][env                      ] [N'Garai] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-11-24 14:17:57,051][INFO ][node                     ] [N'Garai] initialized
+[2016-11-24 14:17:57,051][INFO ][node                     ] [N'Garai] starting ...
+[2016-11-24 14:17:58,204][INFO ][transport                ] [N'Garai] publish_address {127.0.0.1:9301}, bound_addresses {127.0.0.1:9301}
+[2016-11-24 14:17:58,556][INFO ][discovery                ] [N'Garai] elasticsearch/ZFThUUkRQB6HnYJI1cNeKA
+[2016-11-24 14:18:01,759][INFO ][cluster.service          ] [N'Garai] detected_master {Delphine Courtney}{qUEciPXBTsqhxD_Yl54GYA}{127.0.0.1}{127.0.0.1:9300}, added {{Delphine Courtney}{qUEciPXBTsqhxD_Yl54GYA}{127.0.0.1}{127.0.0.1:9300},}, reason: zen-disco-receive(from master [{Delphine Courtney}{qUEciPXBTsqhxD_Yl54GYA}{127.0.0.1}{127.0.0.1:9300}])
+[2016-11-24 14:18:02,243][INFO ][http                     ] [N'Garai] publish_address {127.0.0.1:9201}, bound_addresses {127.0.0.1:9201}
+[2016-11-24 14:18:02,244][INFO ][node                     ] [N'Garai] started
+[2016-11-24 14:18:05,438][WARN ][transport                ] [N'Garai] Transport response handler not found of id [16]
+[2016-11-24 14:18:10,048][WARN ][transport                ] [N'Garai] Transport response handler not found of id [24]
+[2016-11-24 14:18:11,001][WARN ][transport                ] [N'Garai] Transport response handler not found of id [28]
+[2016-11-24 23:48:08,704][WARN ][transport                ] [N'Garai] Transport response handler not found of id [34218]
+[2016-11-24 23:48:08,983][WARN ][transport                ] [N'Garai] Transport response handler not found of id [34220]
+[2016-11-24 23:48:09,207][WARN ][transport                ] [N'Garai] Transport response handler not found of id [34221]
+[2016-11-24 23:48:10,087][WARN ][transport                ] [N'Garai] Transport response handler not found of id [34232]
+[2016-11-24 23:51:31,391][WARN ][transport                ] [N'Garai] Transport response handler not found of id [34455]
+[2016-11-24 23:51:31,893][WARN ][transport                ] [N'Garai] Transport response handler not found of id [34456]
+[2016-11-24 23:51:35,923][WARN ][transport                ] [N'Garai] Transport response handler not found of id [34477]
+[2016-11-24 23:51:36,197][WARN ][transport                ] [N'Garai] Transport response handler not found of id [34480]

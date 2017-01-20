@@ -1,0 +1,15 @@
+[2016-12-23 11:33:35,977][INFO ][node                     ] [Kimura] version[2.4.0], pid[13792], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2016-12-23 11:33:36,000][INFO ][node                     ] [Kimura] initializing ...
+[2016-12-23 11:33:38,599][INFO ][plugins                  ] [Kimura] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-12-23 11:33:38,810][INFO ][env                      ] [Kimura] using [1] data paths, mounts [[/home (/dev/mapper/fedora-home)]], net usable_space [2.4tb], net total_space [2.6tb], spins? [possibly], types [ext4]
+[2016-12-23 11:33:38,811][INFO ][env                      ] [Kimura] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-12-23 11:33:38,811][WARN ][env                      ] [Kimura] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-12-23 11:33:45,725][INFO ][node                     ] [Kimura] initialized
+[2016-12-23 11:33:45,726][INFO ][node                     ] [Kimura] starting ...
+[2016-12-23 11:33:46,309][INFO ][transport                ] [Kimura] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-12-23 11:33:46,335][INFO ][discovery                ] [Kimura] elasticsearch/CCCNdaIeT5uoNDrZOOiohw
+[2016-12-23 11:33:49,447][INFO ][cluster.service          ] [Kimura] new_master {Kimura}{CCCNdaIeT5uoNDrZOOiohw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-12-23 11:33:49,499][INFO ][http                     ] [Kimura] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2016-12-23 11:33:49,500][INFO ][node                     ] [Kimura] started
+[2016-12-23 11:33:50,593][INFO ][gateway                  ] [Kimura] recovered [3] indices into cluster_state
+[2016-12-23 20:31:38,850][INFO ][monitor.jvm              ] [Kimura] [gc][young][32265][13] duration [788ms], collections [1]/[1.5s], total [788ms]/[1s], memory [83.8mb]->[16.3mb]/[990.7mb], all_pools {[young] [68.1mb]->[630.7kb]/[266.2mb]}{[survivor] [165.7kb]->[163.2kb]/[33.2mb]}{[old] [15.5mb]->[15.5mb]/[691.2mb]}

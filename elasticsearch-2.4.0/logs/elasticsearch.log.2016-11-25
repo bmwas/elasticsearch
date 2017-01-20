@@ -1,0 +1,119 @@
+[2016-11-25 01:06:09,229][WARN ][transport                ] [Delphine Courtney] Transport response handler not found of id [193159]
+[2016-11-25 01:06:09,232][DEBUG][action.search            ] [Delphine Courtney] [optobiz][3], node[ZFThUUkRQB6HnYJI1cNeKA], [R], v[3], s[STARTED], a[id=TH1A5h9STbCZVDdQ9DIuaw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3a49a67b]
+RemoteTransportException[[N'Garai][127.0.0.1:9301][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"category": "Optometrists", "geocode": "29.7311841,-95.4660092", "neighborhood": "Gulfton, Galleria/Uptown", "street": "5177 Richmond Ave", "business": "Family Vision Solutions"}]]; nested: SearchParseException[failed to parse search source. unknown search element [category]];
+Caused by: SearchParseException[failed to parse search source [{"category": "Optometrists", "geocode": "29.7311841,-95.4660092", "neighborhood": "Gulfton, Galleria/Uptown", "street": "5177 Richmond Ave", "business": "Family Vision Solutions"}]]; nested: SearchParseException[failed to parse search source. unknown search element [category]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:873)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:667)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.doRun(MessageChannelHandler.java:293)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: SearchParseException[failed to parse search source. unknown search element [category]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:854)
+	... 12 more
+[2016-11-25 01:06:09,234][DEBUG][action.search            ] [Delphine Courtney] All shards failed for phase: [query]
+RemoteTransportException[[N'Garai][127.0.0.1:9301][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"category": "Optometrists", "geocode": "29.7311841,-95.4660092", "neighborhood": "Gulfton, Galleria/Uptown", "street": "5177 Richmond Ave", "business": "Family Vision Solutions"}]]; nested: SearchParseException[failed to parse search source. unknown search element [category]];
+Caused by: SearchParseException[failed to parse search source [{"category": "Optometrists", "geocode": "29.7311841,-95.4660092", "neighborhood": "Gulfton, Galleria/Uptown", "street": "5177 Richmond Ave", "business": "Family Vision Solutions"}]]; nested: SearchParseException[failed to parse search source. unknown search element [category]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:873)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:667)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.doRun(MessageChannelHandler.java:293)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: SearchParseException[failed to parse search source. unknown search element [category]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:854)
+	... 12 more
+[2016-11-25 01:06:09,232][DEBUG][action.search            ] [Delphine Courtney] [optobiz][4], node[ZFThUUkRQB6HnYJI1cNeKA], [P], v[4], s[STARTED], a[id=nzEtkfhKS26ti1IRtxavOw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3a49a67b] lastShard [true]
+RemoteTransportException[[N'Garai][127.0.0.1:9301][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"category": "Optometrists", "geocode": "29.7311841,-95.4660092", "neighborhood": "Gulfton, Galleria/Uptown", "street": "5177 Richmond Ave", "business": "Family Vision Solutions"}]]; nested: SearchParseException[failed to parse search source. unknown search element [category]];
+Caused by: SearchParseException[failed to parse search source [{"category": "Optometrists", "geocode": "29.7311841,-95.4660092", "neighborhood": "Gulfton, Galleria/Uptown", "street": "5177 Richmond Ave", "business": "Family Vision Solutions"}]]; nested: SearchParseException[failed to parse search source. unknown search element [category]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:873)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:667)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.doRun(MessageChannelHandler.java:293)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: SearchParseException[failed to parse search source. unknown search element [category]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:854)
+	... 12 more
+[2016-11-25 01:06:09,230][DEBUG][action.search            ] [Delphine Courtney] [optobiz][0], node[ZFThUUkRQB6HnYJI1cNeKA], [P], v[3], s[STARTED], a[id=U2CiuG_-Qde0XLXkjKrweA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3a49a67b] lastShard [true]
+RemoteTransportException[[N'Garai][127.0.0.1:9301][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"category": "Optometrists", "geocode": "29.7311841,-95.4660092", "neighborhood": "Gulfton, Galleria/Uptown", "street": "5177 Richmond Ave", "business": "Family Vision Solutions"}]]; nested: SearchParseException[failed to parse search source. unknown search element [category]];
+Caused by: SearchParseException[failed to parse search source [{"category": "Optometrists", "geocode": "29.7311841,-95.4660092", "neighborhood": "Gulfton, Galleria/Uptown", "street": "5177 Richmond Ave", "business": "Family Vision Solutions"}]]; nested: SearchParseException[failed to parse search source. unknown search element [category]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:873)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:667)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.netty.MessageChannelHandler$RequestHandler.doRun(MessageChannelHandler.java:293)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: SearchParseException[failed to parse search source. unknown search element [category]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:854)
+	... 12 more
+[2016-11-25 01:06:09,236][WARN ][transport                ] [Delphine Courtney] Transport response handler not found of id [193167]
+[2016-11-25 01:06:09,230][DEBUG][action.search            ] [Delphine Courtney] [optobiz][2], node[qUEciPXBTsqhxD_Yl54GYA], [R], v[4], s[STARTED], a[id=NbFfaQuFSEqkAokxBy-kbg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3a49a67b] lastShard [true]
+RemoteTransportException[[Delphine Courtney][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"category": "Optometrists", "geocode": "29.7311841,-95.4660092", "neighborhood": "Gulfton, Galleria/Uptown", "street": "5177 Richmond Ave", "business": "Family Vision Solutions"}]]; nested: SearchParseException[failed to parse search source. unknown search element [category]];
+Caused by: SearchParseException[failed to parse search source [{"category": "Optometrists", "geocode": "29.7311841,-95.4660092", "neighborhood": "Gulfton, Galleria/Uptown", "street": "5177 Richmond Ave", "business": "Family Vision Solutions"}]]; nested: SearchParseException[failed to parse search source. unknown search element [category]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:873)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:667)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: SearchParseException[failed to parse search source. unknown search element [category]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:854)
+	... 12 more
+[2016-11-25 01:06:09,229][DEBUG][action.search            ] [Delphine Courtney] [optobiz][1], node[qUEciPXBTsqhxD_Yl54GYA], [P], v[3], s[STARTED], a[id=Cl_YTJ4fQlK_oaW6qyhYIw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3a49a67b] lastShard [true]
+RemoteTransportException[[Delphine Courtney][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"category": "Optometrists", "geocode": "29.7311841,-95.4660092", "neighborhood": "Gulfton, Galleria/Uptown", "street": "5177 Richmond Ave", "business": "Family Vision Solutions"}]]; nested: SearchParseException[failed to parse search source. unknown search element [category]];
+Caused by: SearchParseException[failed to parse search source [{"category": "Optometrists", "geocode": "29.7311841,-95.4660092", "neighborhood": "Gulfton, Galleria/Uptown", "street": "5177 Richmond Ave", "business": "Family Vision Solutions"}]]; nested: SearchParseException[failed to parse search source. unknown search element [category]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:873)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:667)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: SearchParseException[failed to parse search source. unknown search element [category]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:854)
+	... 12 more
+[2016-11-25 01:06:09,229][WARN ][transport                ] [Delphine Courtney] Transport response handler not found of id [193160]
+[2016-11-25 01:06:09,236][WARN ][transport                ] [Delphine Courtney] Transport response handler not found of id [193164]
+[2016-11-25 01:06:09,235][WARN ][transport                ] [Delphine Courtney] Transport response handler not found of id [193163]

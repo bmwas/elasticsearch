@@ -1,0 +1,40 @@
+[2016-12-25 01:35:57,164][INFO ][node                     ] [Hellcat] version[2.4.0], pid[5639], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2016-12-25 01:35:57,178][INFO ][node                     ] [Hellcat] initializing ...
+[2016-12-25 01:35:58,212][INFO ][plugins                  ] [Hellcat] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-12-25 01:35:58,263][INFO ][env                      ] [Hellcat] using [1] data paths, mounts [[/home (/dev/mapper/fedora-home)]], net usable_space [2.4tb], net total_space [2.6tb], spins? [possibly], types [ext4]
+[2016-12-25 01:35:58,264][INFO ][env                      ] [Hellcat] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-12-25 01:35:58,264][WARN ][env                      ] [Hellcat] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-12-25 01:36:02,085][INFO ][node                     ] [Hellcat] initialized
+[2016-12-25 01:36:02,085][INFO ][node                     ] [Hellcat] starting ...
+[2016-12-25 01:36:02,237][INFO ][transport                ] [Hellcat] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-12-25 01:36:02,244][INFO ][discovery                ] [Hellcat] elasticsearch/bTex-dh-Ru-7JVFw7KdjGg
+[2016-12-25 01:36:05,286][INFO ][cluster.service          ] [Hellcat] new_master {Hellcat}{bTex-dh-Ru-7JVFw7KdjGg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-12-25 01:36:05,307][INFO ][http                     ] [Hellcat] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2016-12-25 01:36:05,308][INFO ][node                     ] [Hellcat] started
+[2016-12-25 01:36:05,980][INFO ][gateway                  ] [Hellcat] recovered [3] indices into cluster_state
+[2016-12-25 01:47:22,971][INFO ][cluster.metadata         ] [Hellcat] [optobiz] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
+[2016-12-25 01:47:24,255][INFO ][cluster.metadata         ] [Hellcat] [optobiz] create_mapping [categories]
+[2016-12-25 02:29:43,644][INFO ][cluster.metadata         ] [Hellcat] [optobiz] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
+[2016-12-25 02:29:44,937][INFO ][cluster.metadata         ] [Hellcat] [optobiz] create_mapping [categories]
+[2016-12-25 02:30:24,287][INFO ][cluster.metadata         ] [Hellcat] [optobiz] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
+[2016-12-25 02:30:26,581][INFO ][cluster.metadata         ] [Hellcat] [optobiz] create_mapping [categories]
+[2016-12-25 02:46:11,357][INFO ][cluster.metadata         ] [Hellcat] [optobiz] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
+[2016-12-25 02:46:12,560][INFO ][cluster.metadata         ] [Hellcat] [optobiz] create_mapping [categories]
+[2016-12-25 02:47:37,488][INFO ][cluster.metadata         ] [Hellcat] [optobiz] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
+[2016-12-25 02:47:39,323][INFO ][cluster.metadata         ] [Hellcat] [optobiz] create_mapping [categories]
+[2016-12-25 02:50:00,091][INFO ][cluster.metadata         ] [Hellcat] [optobiz] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
+[2016-12-25 02:50:01,252][INFO ][cluster.metadata         ] [Hellcat] [optobiz] create_mapping [categories]
+[2016-12-25 15:55:31,659][INFO ][node                     ] [Melee] version[2.4.0], pid[8200], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2016-12-25 15:55:31,723][INFO ][node                     ] [Melee] initializing ...
+[2016-12-25 15:55:40,061][INFO ][plugins                  ] [Melee] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-12-25 15:55:40,397][INFO ][env                      ] [Melee] using [1] data paths, mounts [[/home (/dev/mapper/fedora-home)]], net usable_space [2.4tb], net total_space [2.6tb], spins? [possibly], types [ext4]
+[2016-12-25 15:55:40,433][INFO ][env                      ] [Melee] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-12-25 15:55:40,441][WARN ][env                      ] [Melee] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-12-25 15:56:05,454][INFO ][node                     ] [Melee] initialized
+[2016-12-25 15:56:05,471][INFO ][node                     ] [Melee] starting ...
+[2016-12-25 15:56:06,623][INFO ][transport                ] [Melee] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-12-25 15:56:06,698][INFO ][discovery                ] [Melee] elasticsearch/OsiW6K8mS5yFE8xQWDtB5Q
+[2016-12-25 15:56:10,168][INFO ][cluster.service          ] [Melee] new_master {Melee}{OsiW6K8mS5yFE8xQWDtB5Q}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-12-25 15:56:10,328][INFO ][http                     ] [Melee] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2016-12-25 15:56:10,329][INFO ][node                     ] [Melee] started
+[2016-12-25 15:56:11,816][INFO ][gateway                  ] [Melee] recovered [3] indices into cluster_state

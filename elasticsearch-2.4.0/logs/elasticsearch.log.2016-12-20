@@ -1,0 +1,14 @@
+[2016-12-20 07:10:19,708][INFO ][node                     ] [Hargen the Measurer] version[2.4.0], pid[8085], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2016-12-20 07:10:19,710][INFO ][node                     ] [Hargen the Measurer] initializing ...
+[2016-12-20 07:10:20,359][INFO ][plugins                  ] [Hargen the Measurer] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-12-20 07:10:20,425][INFO ][env                      ] [Hargen the Measurer] using [1] data paths, mounts [[/home (/dev/mapper/fedora-home)]], net usable_space [1.3tb], net total_space [1.5tb], spins? [possibly], types [ext4]
+[2016-12-20 07:10:20,426][INFO ][env                      ] [Hargen the Measurer] heap size [989.8mb], compressed ordinary object pointers [true]
+[2016-12-20 07:10:20,426][WARN ][env                      ] [Hargen the Measurer] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-12-20 07:10:22,089][INFO ][node                     ] [Hargen the Measurer] initialized
+[2016-12-20 07:10:22,089][INFO ][node                     ] [Hargen the Measurer] starting ...
+[2016-12-20 07:10:22,248][INFO ][transport                ] [Hargen the Measurer] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-12-20 07:10:22,265][INFO ][discovery                ] [Hargen the Measurer] elasticsearch/xrKEAuHQTVWiWgsRQqfK4g
+[2016-12-20 07:10:25,303][INFO ][cluster.service          ] [Hargen the Measurer] new_master {Hargen the Measurer}{xrKEAuHQTVWiWgsRQqfK4g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-12-20 07:10:25,329][INFO ][http                     ] [Hargen the Measurer] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2016-12-20 07:10:25,330][INFO ][node                     ] [Hargen the Measurer] started
+[2016-12-20 07:10:25,813][INFO ][gateway                  ] [Hargen the Measurer] recovered [3] indices into cluster_state
