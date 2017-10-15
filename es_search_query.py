@@ -22,8 +22,8 @@ df=pd.read_csv(pt+'Houston_optometrists.csv')
 es = Elasticsearch()
 count=1;
 #The csv contains business name, category, neighborhood, latitude, longitude and street name.
+li=[]
 for i in range(0,len(df.index)):
-    li=[]
     doc = {'business':df['business'][i],'category':df['category'][i],'neighborhood':df['neighborhood'][i],'latitude':df['latitude'][i],'longitude':df['longitude'][i],'street':df['street'][i]}
     res = es.index(index="optobiz", doc_type='categories', id=count, body=doc)
     li.append({
